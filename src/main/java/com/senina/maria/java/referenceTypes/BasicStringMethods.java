@@ -42,5 +42,18 @@ public class BasicStringMethods {
         System.out.println(biggerString.equals("This is a lot of text")); //case-sensitive
         System.out.println(biggerString.equalsIgnoreCase("This is a LOT of text")); //ignores case
 
+        //temporarily concat a string with another string
+        String str2 = "Java";
+        System.out.println(str2.concat(" is awesome"));
+        System.out.println(str2);
+
+        //Upper/lower case conversion
+        System.out.println(str2.toUpperCase());
+        System.out.println(str2.toLowerCase());
+
+        //remove spaces at the start and at the end of a string with .trim()
+        String str3 = "   new string   ";
+        System.out.println(str3);
+        System.out.println(str3.trim());
     }
 }
