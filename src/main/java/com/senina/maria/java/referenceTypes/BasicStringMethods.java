@@ -20,6 +20,27 @@ public class BasicStringMethods {
         System.out.println(biggerString.substring(5));
         System.out.println(biggerString.substring(5, 13));
 
+        //use indexOf() to get the index of the first character of the desired String
+        System.out.println(biggerString.indexOf("lot"));
+
+        //lastIndexOf() returns the index of the last occurrence of a letter
+        System.out.println(biggerString.lastIndexOf('t'));
+
+        //search for a word with contains() - returns a boolean value
+        System.out.println(biggerString.contains("text"));
+
+        //check if a String starts with a particular substring by using startsWith() - returns a boolean value
+        System.out.println(biggerString.startsWith("It"));
+
+        //check if a String ends with a specific substring by using endsWith()
+        System.out.println(biggerString.endsWith("xt"));
+
+        //check if a String is empty with isEmpty()
+        System.out.println(biggerString.isEmpty());
+
+        //check if a String equals to another String
+        System.out.println(biggerString.equals("This is a lot of text")); //case-sensitive
+        System.out.println(biggerString.equalsIgnoreCase("This is a LOT of text")); //ignores case
 
     }
 }
