@@ -28,5 +28,25 @@ public class JavaDates {
         // LocalDateTime (holds both date and time) * immutable
         LocalDateTime dateTime = LocalDateTime.now();
         System.out.println("Date/Time: " + dateTime);
+
+        System.out.println();
+
+        //hard-code the date using .of(year, month, dayOfMonth)
+        LocalDate yesterday = LocalDate.of(2021, 9, 11);
+        System.out.println("Yesterday: " + yesterday);
+
+        System.out.println();
+
+        //modifying dates with specific attributes
+        System.out.println("Today as a 100th day of the year: " + date.withDayOfYear(100));
+        System.out.println("Today in year 2016: " + date.withYear(2016));
+        System.out.println("Today as 20th day of the current month: " + date.withDayOfMonth(20));
+        System.out.println("Today in the 3rd month of the year: " + date.withMonth(3));
+
+        System.out.println();
+
+        //compare dates
+        System.out.println("\"date\" before \"yesterday\" check: " + date.isBefore(yesterday));
+        System.out.println("\"date\" after \"yesterday\" check: " + date.isAfter(yesterday));
     }
 }
