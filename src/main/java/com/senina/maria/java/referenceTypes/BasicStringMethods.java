@@ -55,5 +55,15 @@ public class BasicStringMethods {
         String str3 = "   new string   ";
         System.out.println(str3);
         System.out.println(str3.trim());
+
+        //concatenation using "+" (string + int = string)
+        System.out.println(1 + 2 + "3");
+        System.out.println("1" + 2 + 3);
+
+        //use .join() to separate all the values with the same symbol
+        System.out.println(String.join(", ", str, biggerString));
+
+        //replace a character win a string using .replace('oldChar', 'newChar')
+        System.out.println(str2.replace('J', 'L'));
     }
 }
