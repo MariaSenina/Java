@@ -16,5 +16,14 @@ public class JavaWrapperClasses {
         //the difference between the two creating methods
         System.out.println(integer == integer2); //compares where the values are stored
         System.out.println(integer1 == integer3); //compares the values themselves
+
+        //Auto Boxing uses Integer.valueOf()
+        Integer seven = 7;
+
+        //constants
+        System.out.println("Max value: " + Integer.MAX_VALUE);
+        System.out.println("Min value: " + Integer.MIN_VALUE);
+        System.out.println("Size (bits): " + Integer.SIZE);
+        System.out.println("Size (bytes): " + Integer.BYTES);
     }
 }
