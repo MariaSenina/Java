@@ -4,9 +4,8 @@ import java.math.BigDecimal;
 
 public class StudentTest {
     public static void main(String[] args) {
-        int[] marksR = {100, 50, 99, 97, 77};
 
-        Student student = new Student("Rexxinho", marksR);
+        Student student = new Student("Rexxinho", 100, 50, 99, 97, 77);
 
         int number = student.getNumberOfMarks();
         System.out.println("Number of marks: " + number);
