@@ -2,26 +2,33 @@ package com.senina.maria.java.arraysAndArrayLists;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 
 public class Student {
     private String name;
-    private int[] marks;
+    private ArrayList<Integer> marks = new ArrayList<>();
 
     public Student(String name, int... marks) {
         this.name = name;
-        this.marks = marks;
+        for (int mark : marks) {
+            this.marks.add(mark);
+        }
     }
 
     public String getName() {
         return name;
     }
 
-    public int[] getMarks() {
+    public ArrayList<Integer> getMarks() {
         return marks;
     }
 
+    public String toString() {
+        return name + marks;
+    }
+
     public int getNumberOfMarks() {
-        return marks.length;
+        return marks.size();
     }
 
     public int getTotalSumOfMarks() {

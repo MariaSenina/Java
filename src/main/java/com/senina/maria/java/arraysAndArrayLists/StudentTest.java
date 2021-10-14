@@ -21,5 +21,7 @@ public class StudentTest {
 
         BigDecimal average = student.getAverageMarks();
         System.out.println("Average: " + average);
+
+        System.out.println(student);
     }
 }
