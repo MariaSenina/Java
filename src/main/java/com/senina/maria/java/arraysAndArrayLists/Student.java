@@ -65,4 +65,12 @@ public class Student {
 
         return new BigDecimal(sum).divide(new BigDecimal(number), 3, RoundingMode.UP);
     }
+
+    public void addNewMark(int mark) {
+        marks.add(mark);
+    }
+
+    public void removeMarkAtIndex(int index) {
+        marks.remove(index);
+    }
 }

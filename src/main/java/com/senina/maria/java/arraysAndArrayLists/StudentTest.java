@@ -23,5 +23,13 @@ public class StudentTest {
         System.out.println("Average: " + average);
 
         System.out.println(student);
+
+        student.addNewMark(99);
+
+        System.out.println(student);
+
+        student.removeMarkAtIndex(3);
+
+        System.out.println(student);
     }
 }
