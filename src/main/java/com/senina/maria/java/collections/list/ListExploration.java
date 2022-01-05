@@ -1,5 +1,6 @@
 package com.senina.maria.java.collections.list;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListExploration {
@@ -15,7 +16,17 @@ public class ListExploration {
         System.out.println("Element at 0: " + words.get(0));
 
         System.out.println("Contains 'Dog': " + words.contains("Dog"));
+
+        //Removing integers
+        List<Integer> numbers = List.of(101, 102, 103, 104, 105);
+        List<Integer> numbersArrayList = new ArrayList<>(numbers);
+        System.out.println("Original numbers: " + numbersArrayList);
+
+        numbersArrayList.remove(Integer.valueOf(101)); //must use .valueof(), otherwise Java assumes it's an index
+        System.out.println("101 deleted: " + numbersArrayList);
     }
+
+    //You CANNOT store primitives in a list (int will be stored as Integer -> Auto Boxing)
 
     //List is immutable. In order to be able to modify values in a List we need to create one of the following:
     //ArrayList, LinkedList, Vector
