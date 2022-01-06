@@ -30,4 +30,8 @@ public class SetExploration {
     //NOTE: the efficiency of your hash table will always depend on the efficiency of your hashing function
 
     //Implementation of the hashing function is always done through a hashcode() method
+
+    //TREE
+    //Allows us to store elements in sorted order
+    //Left sub-tree stores smaller elements, right sub-tree stores greater elements
 }
