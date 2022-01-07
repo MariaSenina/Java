@@ -1,11 +1,17 @@
 package com.senina.maria.java.generics;
 
 public class GenericsTest {
+
+    //generic method example
+    static <X> X doubleValue(X value) {
+        return value;
+    }
+
     public static void main(String[] args) {
-        MyCustomList<String> list = new MyCustomList<>();
-        list.addElement("Element 1");
-        list.addElement("Element 2");
-        String value = list.get(0);
+        MyCustomList<Long> list = new MyCustomList<>();
+        list.addElement(5L);
+        list.addElement(7L);
+        Long value = list.get(0);
 
         System.out.println("List: " + list);
         System.out.println(value);
