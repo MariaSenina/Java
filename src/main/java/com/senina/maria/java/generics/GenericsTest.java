@@ -1,10 +1,29 @@
 package com.senina.maria.java.generics;
 
+import java.util.List;
+
 public class GenericsTest {
 
     //generic method example
     static <X> X doubleValue(X value) {
         return value;
+    }
+
+    //using wildcards:
+    // -> upper-bound wild card
+    static double sumOfNumberList(List<? extends Number> numbers) {
+        double sum = 0.0;
+        for(Number number : numbers) {
+            sum += number.doubleValue();
+        }
+        return sum;
+    }
+
+    // -> lower-bound wild card
+    static void addACoupleOfValues(List<? super Number> numbers) {
+        numbers.add(1);
+        numbers.add(1.0);
+        numbers.add(1L);
     }
 
     public static void main(String[] args) {
