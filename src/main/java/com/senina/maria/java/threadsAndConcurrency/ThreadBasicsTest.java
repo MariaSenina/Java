@@ -16,9 +16,17 @@ class Task2 implements Runnable {
 
     @Override
     public void run() {    //exact signature
+        try {
+            Thread.sleep(10000); //takes milliseconds
+            System.out.println("Thread1 sleeping for 10 seconds");
+        } catch (InterruptedException e) {
+            System.out.println("exception caught");
+        }
+
         System.out.print("\n Task2 Started ");
 
         for(int i = 201; i <=299; i++) {
+            Thread.yield(); //request to give up CPU
             System.out.print(i + " ");
         }
 
