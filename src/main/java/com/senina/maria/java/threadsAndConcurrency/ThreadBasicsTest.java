@@ -12,6 +12,20 @@ class Task1 extends Thread {
     }
 }
 
+class Task2 implements Runnable {
+
+    @Override
+    public void run() {    //exact signature
+        System.out.print("\n Task2 Started ");
+
+        for(int i = 201; i <=299; i++) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n Task2 Done");
+    }
+}
+
 public class ThreadBasicsTest {
     public static void main(String[] args) {
 
@@ -22,10 +36,9 @@ public class ThreadBasicsTest {
 
         //Task 2: 201 to 299
         System.out.print("\n Task2 Kicked Off ");
-        for(int i = 201; i <=299; i++) {
-            System.out.print(i + " ");
-        }
-        System.out.println("\n Task2 Done");
+        Task2 task2 = new Task2();
+        Thread task2Thread = new Thread(task2);
+        task2Thread.start();
 
         //Task 3: 301 to 399
         System.out.print("\n Task3 Kicked Off ");
@@ -33,5 +46,7 @@ public class ThreadBasicsTest {
             System.out.print(i + " ");
         }
         System.out.println("\n Task3 Done");
+
+        System.out.println("Main method done");
     }
 }
