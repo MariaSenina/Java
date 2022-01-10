@@ -49,4 +49,18 @@ public class ThreadBasicsTest {
 
         System.out.println("Main method done");
     }
+
+    //Thread states:
+
+    // -> NEW:
+    //    -> Ready but not executed yet (before start() is called)
+    // -> RUNNABLE:
+    //    -> A thread is ready to run but another thread is being executed at that point
+    // -> RUNNING:
+    //    -> A thread is being executed
+    // -> BLOCKED/WAITING:
+    //    -> Waiting for an external service to be reached (i.e. return data from database)
+    //    -> Waiting for another thread to provide information necessary for completion of this thread
+    // -> TERMINATED/DEAD:
+    //    -> Thread is done executing (execution complete)
 }
