@@ -20,6 +20,7 @@ public class CallableTest {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(1);
 
+        //A promise that we will get a result at a later time
         Future<String> welcomeFuture = executorService.submit(new CallableTask("Java"));
         System.out.print("new CallableTask(\"Java\") executed");
 
