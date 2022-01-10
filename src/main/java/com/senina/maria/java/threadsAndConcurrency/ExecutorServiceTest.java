@@ -24,18 +24,16 @@ class Task extends Thread {
 public class ExecutorServiceTest {
     public static void main(String[] args) {
 //        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        // ^ max 5 threads are active at any one time
 
         executorService.execute(new Task(1));
-        //Two threads are now running at the same time
-        executorService.execute(new Thread(new Task(2)));
-
-        //Task 3: 301 to 399
-        System.out.print("\n Task3 Kicked Off ");
-        for(int i = 301; i <=399; i++) {
-            System.out.print(i + " ");
-        }
-        System.out.println("\n Task3 Done");
+        executorService.execute(new Task(2));
+        executorService.execute(new Task(3));
+        executorService.execute(new Task(4));
+        executorService.execute(new Task(5));
+        executorService.execute(new Task(6));
+        executorService.execute(new Task(7));
 
         executorService.shutdown(); //shuts down executorService, otherwise the program would run forever
         System.out.println("Main method done");
