@@ -32,12 +32,14 @@ public class ThreadBasicsTest {
         //Task 1: 101 to 199
         System.out.print("\n Task1 Kicked Off ");
         Task1 task1 = new Task1();
+        task1.setPriority(1);  //priorities range from 1 to 10 (5 is normal). NOTE: This is only a request
         task1.start();
 
         //Task 2: 201 to 299
         System.out.print("\n Task2 Kicked Off ");
         Task2 task2 = new Task2();
         Thread task2Thread = new Thread(task2);
+        task2Thread.setPriority(10);
         task2Thread.start();
 
         //Task 3: 301 to 399
