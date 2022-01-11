@@ -16,7 +16,11 @@ public class ExceptionHandlingTest {
             String str = null;
             str.length();
             System.out.println("Method2 ended");
+        } catch(NullPointerException ex) { //the exception that is most specific to the case will be caught
+            System.out.println("Matched NullPointerException");
+            ex.printStackTrace();
         } catch(Exception ex) {
+            System.out.println("Matched Exception");
             ex.printStackTrace();
         }
     }
