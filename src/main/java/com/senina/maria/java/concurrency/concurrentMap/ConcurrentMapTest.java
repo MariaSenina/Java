@@ -20,4 +20,6 @@ public class ConcurrentMapTest {
     //computeIfAbsent method takes a key and a lambda expression
 
     //NOTE: Local variables are NOT shared between threads
+
+    //ConcurrentHashMap uses locks to block of different regions of a Hashtable
 }
