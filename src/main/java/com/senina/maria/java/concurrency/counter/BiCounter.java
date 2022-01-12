@@ -1,4 +1,4 @@
-package com.senina.maria.java.concurrency;
+package com.senina.maria.java.concurrency.counter;
 
 public class BiCounter {
     private int i = 0;

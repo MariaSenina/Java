@@ -1,4 +1,4 @@
-package com.senina.maria.java.concurrency;
+package com.senina.maria.java.concurrency.counter;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
