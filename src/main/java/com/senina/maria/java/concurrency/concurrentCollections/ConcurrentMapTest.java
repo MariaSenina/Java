@@ -1,4 +1,4 @@
-package com.senina.maria.java.concurrency.concurrentMap;
+package com.senina.maria.java.concurrency.concurrentCollections;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
