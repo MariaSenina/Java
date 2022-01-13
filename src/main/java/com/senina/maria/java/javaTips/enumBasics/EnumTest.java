@@ -4,8 +4,18 @@ import java.sql.SQLOutput;
 import java.util.Arrays;
 
 enum Season {
-    WINTER, SPRING, SUMMER, FALL;
-    //0, 1, 2, 3
+    WINTER(1), SPRING(2), SUMMER(3), FALL(4);
+    //0, 1, 2, 3 -> ordinals
+
+    private int value;
+
+    private Season(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }
 
 public class EnumTest {
@@ -16,6 +26,7 @@ public class EnumTest {
         System.out.println("Season1: " + season1);
         System.out.println("Season1 ordinal: " + season1.ordinal()); //values are assigned an 'ordinal' by default
         System.out.println("SPRING ordinal: " + Season.SPRING.ordinal());
+        System.out.println("SPRING value: " + Season.SPRING.getValue());
 
         System.out.println(Arrays.toString(Season.values()));
     }
