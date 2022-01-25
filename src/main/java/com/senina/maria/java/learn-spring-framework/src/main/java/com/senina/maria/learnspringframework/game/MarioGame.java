@@ -1,5 +1,8 @@
 package com.senina.maria.learnspringframework.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MarioGame implements GamingConsole {
 
     @Override
