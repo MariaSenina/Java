@@ -1,9 +1,9 @@
 package com.senina.maria.learnspringframework.game;
 
 public class GameRunner {
-    private MarioGame game;
+    private GamingConsole game;
 
-    public GameRunner(MarioGame game) {
+    public GameRunner(GamingConsole game) {
         this.game = game;
     }
 

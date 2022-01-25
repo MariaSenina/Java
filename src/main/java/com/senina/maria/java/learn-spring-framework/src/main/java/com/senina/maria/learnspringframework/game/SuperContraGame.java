@@ -1,6 +1,6 @@
 package com.senina.maria.learnspringframework.game;
 
-public class SuperContraGame {
+public class SuperContraGame implements GamingConsole {
 
     public void up() {
         System.out.println("up");
