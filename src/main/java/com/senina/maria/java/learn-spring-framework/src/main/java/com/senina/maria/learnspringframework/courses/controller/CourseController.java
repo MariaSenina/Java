@@ -11,6 +11,12 @@ import java.util.List;
 public class CourseController {
     @GetMapping("/courses")
     public List<Course> getAllCourses() {
-        return Arrays.asList(new Course(1, "Learn Microservices", "in28minutes"));
+        return Arrays.asList(new Course(1, "Learn Microservices", "in28minutes"),
+                new Course(2, "Learn Full Stack with Angular and React", "in28minutes"));
+    }
+
+    @GetMapping("/courses/1")
+    public Course getFirstCourse() {
+        return getAllCourses().get(0);
     }
 }
