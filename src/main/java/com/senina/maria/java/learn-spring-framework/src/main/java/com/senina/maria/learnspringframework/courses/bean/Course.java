@@ -1,7 +1,15 @@
 package com.senina.maria.learnspringframework.courses.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Course {
+    @Id
+    @GeneratedValue
     private long id;
+
     private String name;
     private String author;
 
@@ -9,6 +17,10 @@ public class Course {
         this.id = id;
         this.name = name;
         this.author = author;
+    }
+
+    public Course() {
+
     }
 
     public long getId() {
