@@ -3,9 +3,7 @@ package com.senina.maria.learnspringframework.courses.controller;
 import com.senina.maria.learnspringframework.courses.bean.Course;
 import com.senina.maria.learnspringframework.courses.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -28,5 +26,10 @@ public class CourseController {
         }
 
         return course.get();
+    }
+
+    @PostMapping("/courses")
+    public void addCourse(@RequestBody Course course) {
+        courseRepository.save(course);
     }
 }
